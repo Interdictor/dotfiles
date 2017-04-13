@@ -25,11 +25,9 @@ alias sdcomp_test='sudo docker-compose run web rake test'
 alias gst='git status'
 alias glo='git log --decorate --oneline'
 alias ber='bundle exec rspec'
-alias berkt='bundle exec rake test'
+alias bex='bundle exec'
 alias berk='bundle exec rake'
 alias bipvend='bundle install --path=vendor/bundle'
-alias gchc='git config --global credential.helper "cache --timeout 10000"'
-
 alias re_xkb='sudo rm -rf /var/lib/xkb/*'
 
 export PS1="\[\e[1m\e[38;5;186m\]\u\[\e[38;5;231m\]@\[\e[38;5;186m\]\h\[\e[38;5;231m\]: \[\e[38;5;35m\]\w\[\e[38;5;227m\]\$(parse_git_branch) \[\e[38;5;255m\]>\[\e[0m\] "
