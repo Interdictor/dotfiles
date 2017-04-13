@@ -37,8 +37,13 @@ export PS1="\[\e[1m\e[38;5;186m\]\u\[\e[38;5;231m\]@\[\e[38;5;186m\]\h\[\e[38;5;
 LS_COLORS=$LS_COLORS:'di=1;96:'; export LS_COLORS
 
 experimental_function() {
-  local THEME_NAME=$1
-  echo $THEME_NAME
+  local SOME_RANDOM_VARIABLE=$1
+  echo $SOME_RANDOM_VARIABLE
+}
+
+link_sublime_theme() {
+  local theme_name=$1
+  ln $theme_name ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
 }
 
 customize_rspec!() {
