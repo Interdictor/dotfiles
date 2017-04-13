@@ -36,6 +36,11 @@ alias re_xkb='sudo rm -rf /var/lib/xkb/*'
 export PS1="\[\e[1m\e[38;5;186m\]\u\[\e[38;5;231m\]@\[\e[38;5;186m\]\h\[\e[38;5;231m\]: \[\e[38;5;35m\]\w\[\e[38;5;227m\]\$(parse_git_branch) \[\e[38;5;255m\]>\[\e[0m\] "
 LS_COLORS=$LS_COLORS:'di=1;96:'; export LS_COLORS
 
+experimental_function() {
+  local THEME_NAME=$1
+  echo $THEME_NAME
+}
+
 customize_rspec!() {
     mv ./spec/spec_helper.rb ./spec/spec_helper.bak
     echo 'RSpec.configure do |config|
