@@ -41,9 +41,16 @@ experimental_function() {
   echo $SOME_RANDOM_VARIABLE
 }
 
-link_sublime_theme() {
+cycle_sublime_theme() {
+  ruby 'compact_syntax.rb'
   local theme_name=$1
-  ln $theme_name ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
+  rm ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
+  cp $theme_name ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
+}
+
+load_sublime_theme() {
+  local theme_name=$1
+  cp $theme_name ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
 }
 
 customize_rspec!() {
