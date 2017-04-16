@@ -41,6 +41,13 @@ experimental_function() {
   echo $SOME_RANDOM_VARIABLE
 }
 
+gemfile!() {
+  echo "source 'https://rubygems.org'
+
+gem 'rspec'
+" > Gemfile
+}
+
 cycle_sublime_theme() {
   ruby 'compact_syntax.rb'
   local theme_name=$1
