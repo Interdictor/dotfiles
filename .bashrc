@@ -20,8 +20,8 @@ alias gcom='git checkout master'
 alias gadda='git add -A'
 alias gdifs='git diff --staged'
 alias sdocker='sudo docker'
-alias sdcomp='sudo docker-compose'
-alias sdcomp_test='sudo docker-compose run web rake test'
+alias sdc='sudo docker-compose'
+alias sdc_test='sudo docker-compose run web rake test'
 alias gst='git status'
 alias glo='git log --decorate --oneline'
 alias ber='bundle exec rspec'
@@ -41,10 +41,19 @@ experimental_function() {
   echo $SOME_RANDOM_VARIABLE
 }
 
+rakefile!() {
+  echo 'task default: :first
+
+task :first do
+  puts "hello, world"
+end
+' > rakefile;
+}
+
 gemfile!() {
   echo "source 'https://rubygems.org'
 
-gem 'rspec'
+gem 'rake', '12.0'
 " > Gemfile
 }
 
