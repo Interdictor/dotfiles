@@ -41,7 +41,7 @@ experimental_function() {
   echo $SOME_RANDOM_VARIABLE
 }
 
-rakefile!() {
+rakefile_() {
   echo 'task default: :first
 
 task :first do
@@ -50,7 +50,7 @@ end
 ' > rakefile;
 }
 
-gemfile!() {
+gemfile_() {
   echo "source 'https://rubygems.org'
 
 gem 'rake', '12.0'
@@ -69,7 +69,7 @@ load_sublime_theme() {
   cp $theme_name ~/.config/sublime-text-3/Packages/Colorsublime\ -\ Themes/$theme_name
 }
 
-customize_rspec!() {
+customize_rspec_() {
     mv ./spec/spec_helper.rb ./spec/spec_helper.bak
     echo 'RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -93,7 +93,7 @@ end' > ./spec/spec_helper.rb
 --format documentation' > .rspec
 }
 
-ignore!() {
+ignore_() {
     echo '
 Gemfile.lock
 /.config

@@ -11,7 +11,6 @@ sudo apt -y install vim
 sudo apt -y install krita
 sudo apt -y install blender
 sudo apt -y install nodejs
-sudo apt -y install inkscape
 sudo apt -y install ruby2.4 ruby2.4-dev
 
 sudo ln -s "$(which nodejs)" /usr/bin/node
