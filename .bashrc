@@ -41,6 +41,10 @@ experimental_function() {
   echo $SOME_RANDOM_VARIABLE
 }
 
+serve_() {
+  ruby -run -e httpd . -p $1
+}
+
 rakefile_() {
   echo 'task default: :first
 
