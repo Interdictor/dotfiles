@@ -1,6 +1,6 @@
 sudo apt-get -y update
 sudo apt -y install git vim gdebi curl
-snap install docker
+curl -sSL https://get.docker.com/ | sh
 
 git config --global core.editor vim
 git config --global push.default simple
