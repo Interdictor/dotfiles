@@ -12,7 +12,8 @@ alias ls='ls --color=auto'
 
 alias gcom='git checkout master'
 alias gst='git status'
-alias glo='git log --decorate --oneline'
+alias glo='git log --pretty=format:"%C(#6c82d5)%h %C(#ebcc88)%an %Creset%s"'
+alias glox='git log --pretty=format:"%C(#baac8b)%d %C(#6c82d5)%h %C(#c8c5bb)%aI %C(#ebcc88)%an %Creset%s"'
 alias bipvend='bundle install --path=vendor/bundle'
 
 BROWN="\e[38;5;180m\]"
