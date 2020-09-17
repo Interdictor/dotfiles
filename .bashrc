@@ -22,6 +22,14 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+clipo() {
+  cat $1 | xclip -selection clipboard
+}
+
+mktouch() {
+  mkdir -p "$(dirname "$1")" && touch "$1"
+}
+
 alias ls='ls --color=auto'
 
 alias gcom='git checkout master'
